@@ -148,6 +148,9 @@ ssh-keygen -t rsa -C "dbqwerty@163.com"
 
 本地 关联远程库
 git remote add origin git@github.com:downeydu/gitrepo.git
+
+git remote add re_repo1 git@github.com:downeydu/re_repo1.git
+
 远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
 
 
@@ -200,4 +203,3 @@ Fast-forward
  1 file changed, 1 insertion(+)
 
 pull后本地的更新会自动提交到本地分支,无需再进行add 和 commit 
-i
