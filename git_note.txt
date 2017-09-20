@@ -316,7 +316,6 @@ $ git log --graph --pretty=oneline --abbrev-commit
 第十三章  Bug分支
 
 
-我是一个bug.
 
 
 
