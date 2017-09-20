@@ -311,3 +311,25 @@ $ git log --graph --pretty=oneline --abbrev-commit
 每个开发者一个分支
 每个bug一个分支
 = =
+
+
+第十三章  Bug分支
+
+
+我是一个bug.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
