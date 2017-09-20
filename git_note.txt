@@ -315,20 +315,4 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 第十三章  Bug分支
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+你好 我是jack
