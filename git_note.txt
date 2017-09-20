@@ -314,5 +314,67 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 
 第十三章  Bug分支
+工作只进行到一半，还没法提交，预计完成还需1天时间。但是，必须在两个小时内修复该bug，怎么办？
 
-你好 我是jack
+幸好，Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+现在，用git status查看工作区，就是干净的（除非有没有被Git管理的文件），因此可以放心地创建分支来修复bug。
+
+$ git stash
+Saved working directory and index state WIP on dev: 6224937 add merge
+HEAD is now at 6224937 add merge
+
+
+
+首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支：
+
+修复完成后，切换到master分支，并完成合并，最后删除issue-101分支：
+
+太棒了，原计划两个小时的bug修复只花了5分钟！现在，是时候接着回到dev分支干活了！
+
+工作区是干净的，刚才的工作现场存到哪去了？用git stash list命令看看：
+
+工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：
+
+一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+注意:stash中的工作,只能一个一个的恢复,必须commit前一个了 才能去pop下一个.
+
+再用git stash list查看，就看不到任何stash内容了：
+$ git stash list
+stash@{0}: WIP on dev: 6224937 add merge
+
+你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：
+$ git stash apply stash@{0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
